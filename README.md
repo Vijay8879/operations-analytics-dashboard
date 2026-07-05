@@ -26,6 +26,10 @@
 
 ---
 
+<p align="center">
+  <img src="screenshots/01-dashboard-overview.png" width="100%">
+</p>
+
 # ✨ Dashboard Highlights
 
 - 📊 Real-time Operations Monitoring
