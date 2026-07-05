@@ -1,6 +1,20 @@
 # 🚀 Real-Time Operations Analytics Dashboard
 
 <p align="center">
+
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
+
+<img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=metabase&logoColor=white">
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+
+</p>
+
+<p align="center">
   <img src="screenshots/01-dashboard-overview.png" width="100%">
 </p>
 
