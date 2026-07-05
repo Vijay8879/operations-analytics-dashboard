@@ -6,18 +6,22 @@
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white">
 </a>
 
-<img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge">
+<a href="https://en.wikipedia.org/wiki/SQL" target="_blank">
+  <img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge">
+</a>
 
-<img src="https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=metabase&logoColor=white">
+<a href="https://www.metabase.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Metabase-509EE3?style=for-the-badge&logo=metabase&logoColor=white">
+</a>
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<a href="https://www.python.org/" target="_blank">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+</a>
 
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+<a href="https://github.com/" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
+</a>
 
-</p>
-
-<p align="center">
-  <img src="screenshots/01-dashboard-overview.png" width="100%">
 </p>
 
 ---
