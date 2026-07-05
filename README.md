@@ -1,12 +1,53 @@
 # 🚀 Real-Time Operations Analytics Dashboard
 
-![Dashboard](screenshots/01-dashboard-overview.png)
+<p align="center">
+  <img src="screenshots/01-dashboard-overview.png" width="100%">
+</p>
 
-## 📌 Project Overview
+---
 
-The **Real-Time Operations Analytics Dashboard** is designed to provide live operational visibility across cities and dark stores. It enables operations teams to monitor order fulfillment, forecast achievement, product deactivation, and key business KPIs throughout the day.
+# ✨ Dashboard Highlights
 
-The dashboard is built using **PostgreSQL**, **Advanced SQL**, and **Metabase**, allowing business users to analyze performance through interactive filters and drill-down capabilities.
+- 📊 Real-time Operations Monitoring
+- 🎯 Forecast vs Actual Tracking
+- 🏙️ City-wise Performance Analysis
+- 🏪 Dark Store Level Drill-down
+- 📦 Product Deactivation Monitoring (C0–C3)
+- 📈 Hourly Performance Tracking
+- 💰 Average Order Value (AOV)
+- 📦 Units Per Order (UPO)
+- 📉 Delivery Gap Analysis
+- ⚡ Interactive Dashboard with Dynamic Filters
+
+---
+
+# 🎛️ Interactive Filters
+
+<table>
+<tr>
+<td align="center">
+<img src="screenshots/02-city-filter.png" width="320"><br>
+<b>City Filter</b><br>
+Select a city to analyze operational KPIs and performance.
+</td>
+
+<td align="center">
+<img src="screenshots/03-darkstore-filter.png" width="320"><br>
+<b>Dark Store Filter</b><br>
+Drill down into individual dark store performance for detailed operational analysis.
+</td>
+</tr>
+</table>
+
+---
+
+# 📌 Project Overview
+
+The **Real-Time Operations Analytics Dashboard** provides live operational visibility across multiple cities and dark stores.
+
+It enables operations teams to monitor order fulfillment, forecast achievement, product deactivation, and operational KPIs throughout the day using interactive dashboards built with **PostgreSQL**, **Advanced SQL**, and **Metabase**.
+
+The dashboard is designed to support fast operational decision-making through real-time monitoring and drill-down capabilities.
 
 ---
 
@@ -17,30 +58,18 @@ The primary objective of this dashboard is to help Operations teams:
 - Monitor live operational performance
 - Compare Forecast vs Actual Orders
 - Identify delivery gaps
-- Track product deactivation trends
-- Monitor dark store performance
+- Track high-priority product deactivation
+- Monitor hourly operational KPIs
 - Improve operational decision making
+- Analyze dark store performance
 
 ---
 
-# 📊 Dashboard Features
-
-### 📍 Dynamic Filters
-
-- City
-- Dark Store
-
-These filters allow users to analyze KPIs for specific operational regions and individual dark stores.
-
----
-
-### 📈 Operational KPIs
-
-The dashboard provides the following KPIs:
+# 📊 Dashboard KPIs
 
 | KPI | Description |
 |------|-------------|
-| Forecast | Total projected orders for the day |
+| Forecast | Expected orders for the day |
 | Booked | Total booked orders |
 | Achievement % | Forecast achievement percentage |
 | Gap | Difference between Forecast and Delivered Orders |
@@ -51,71 +80,69 @@ The dashboard provides the following KPIs:
 
 ---
 
-# 📦 Product Deactivation Monitoring
+# 📦 Product Deactivation Logic
 
-The dashboard tracks inactive products based on business priority.
+The dashboard categorizes inactive products based on business priority.
 
 | Category | Description |
 |----------|-------------|
-| C0 | Top 50 ranked products currently deactivated |
-| C1 | Product ranks 51–100 currently deactivated |
-| C2 | Product ranks 101–200 currently deactivated |
-| C3 | Product ranks 201+ currently deactivated |
+| **C0** | Top 50 ranked products currently deactivated |
+| **C1** | Product ranks **51–100** currently deactivated |
+| **C2** | Product ranks **101–200** currently deactivated |
+| **C3** | Product ranks **201+** currently deactivated |
 
-The cumulative C0 trend helps Operations teams identify how many high-priority products remain inactive throughout the day.
+### Business Purpose
+
+- C0 products require immediate operational attention.
+- C1 products are high-priority products.
+- C2 products represent medium-priority deactivation.
+- C3 products represent lower-priority product monitoring.
+
+The cumulative C0 trend line helps monitor the number of high-priority inactive products throughout the day.
 
 ---
 
 # 📈 Hourly Performance Monitoring
 
-The dashboard monitors hourly operational performance including:
+The dashboard tracks hourly operational performance including:
 
 - Forecast
-- Delivered Orders
+- Booked Orders
+- Hourly Delivered Orders
 - Achievement %
-- Gap Analysis
-- AOV
-- UPO
-- Cumulative Target
+- Delivery Gap
+- Average Order Value (AOV)
+- Units Per Order (UPO)
+- Cumulative Forecast
 - Cumulative Delivered
-- Hourly Deactivation
+- Product Deactivation
+- Last Week Delivered Comparison
 
-This helps identify operational bottlenecks in real time.
+This enables operations managers to identify bottlenecks and take corrective actions in real time.
 
 ---
 
 # 🔍 Drill Down Flow
 
-```
+```text
 City
    │
    ▼
 Dark Store
    │
    ▼
-Hourly Performance
+Hourly Operations
+   │
+   ▼
+Business KPIs
 ```
-
----
-
-# 💻 SQL Highlights
-
-The dashboard is powered by advanced PostgreSQL queries using:
-
-- Common Table Expressions (CTEs)
-- Window Functions
-- Dynamic Filters
-- Historical Trend Analysis
-- Forecast Allocation Logic
-- Cumulative KPI Calculations
-- Business Rule Based Aggregations
 
 ---
 
 # 🛠 Technology Stack
 
-| Technology | Usage |
-|------------|------|
+| Technology | Purpose |
+|------------|----------|
 | PostgreSQL | Database |
 | SQL | Business Logic |
 | Metabase | Dashboard Development |
@@ -123,33 +150,84 @@ The dashboard is powered by advanced PostgreSQL queries using:
 
 ---
 
+# 💻 SQL Highlights
+
+The dashboard is powered by advanced PostgreSQL queries featuring:
+
+- Common Table Expressions (CTEs)
+- Window Functions
+- Dynamic Filters
+- Forecast Allocation Logic
+- Historical Trend Analysis
+- Conditional Aggregations
+- Cumulative KPI Calculations
+- Business Rule Based Transformations
+
+---
+
+# 📈 Business Impact
+
+This dashboard enables Operations teams to:
+
+- Monitor hourly operational performance in real time.
+- Identify forecast vs actual delivery gaps.
+- Track high-priority product deactivations.
+- Analyze city and dark store performance.
+- Improve operational efficiency.
+- Support faster business decisions through interactive visualizations.
+
+---
+
 # 📂 Repository Structure
 
-```
+```text
 operations-analytics-dashboard
 │
-├── screenshots/
-├── sql/
+├── architecture/
 ├── docs/
+├── screenshots/
+│   ├── 01-dashboard-overview.png
+│   ├── 02-city-filter.png
+│   └── 03-darkstore-filter.png
+│
+├── sql/
+│
 ├── README.md
+│
+└── LICENSE
 ```
 
 ---
 
 # 🚀 Future Enhancements
 
-- Automated alert generation
-- Predictive demand forecasting
-- Email KPI reports
-- Mobile responsive dashboard
-- Store performance benchmarking
+- Automated KPI Alerts
+- Email Report Automation
+- Predictive Demand Forecasting
+- Mobile Dashboard
+- Dark Store Benchmarking
+- Operational Trend Analysis
 
 ---
 
 # 👨‍💻 Developed By
 
-**Vijay Sharma**
+## Vijay Sharma
 
-Senior Business Analyst
+**Senior Business Analyst**
 
-SQL | PostgreSQL | Metabase | ETL | Python | Data Analytics
+**Skills**
+
+- SQL
+- PostgreSQL
+- Metabase
+- Python
+- ETL
+- Airflow
+- Data Analytics
+- Dashboard Development
+- Business Intelligence
+
+---
+
+⭐ If you found this project useful, don't forget to **Star** this repository.
