@@ -1,6 +1,6 @@
 # 🚀 Real-Time Operations Analytics Dashboard
 
-![Dashboard](screenshots/dashboard-overview.png)
+![Dashboard](screenshots/01-dashboard-overview.png)
 
 ## 📌 Project Overview
 
