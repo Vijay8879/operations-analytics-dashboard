@@ -24,11 +24,15 @@
 
 </p>
 
----
+## 📊 Dashboard Overview
 
 <p align="center">
-  <img src="screenshots/01-dashboard-overview.png" width="100%">
+  <img src="screenshots/01-dashboard-overview.png" width="100%" alt="Dashboard Overview">
 </p>
+
+The dashboard provides a real-time operational view of forecast, booked orders, delivery performance, product deactivation, hourly KPIs, AOV, UPO, and business performance across cities and dark stores.
+
+---
 
 # ✨ Dashboard Highlights
 
